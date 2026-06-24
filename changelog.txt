@@ -1,0 +1,13 @@
+Version: 0.1.4
+  Changes:
+   -fix
+
+Version: 0.1.3
+  Changes:
+   -compatible with "Planet Paracelsin"
+
+Version: 0.1.2
+  Changes:
+   -balance "advanced-thruster-fuel" gravity is no longer required for the recipe
+   -balance "advanced-thruster-oxidizer" requires more ice and the oxidizer yield is less
+  
