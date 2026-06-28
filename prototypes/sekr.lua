@@ -28,8 +28,8 @@ if mods["Paracelsin"] then
 
 data.raw.planet["paracelsin"].label_orientation = 0
 data.raw.planet["paracelsin"].magnitude = 1
-data.raw.planet["paracelsin"].orientation = 0.27
-data.raw.planet["paracelsin"].distance = 34
+data.raw.planet["paracelsin"].orientation = 0.25
+data.raw.planet["paracelsin"].distance = 38
 
 	data:extend(
 		{
@@ -65,11 +65,15 @@ if mods["secretas"] then
 	end
 
 ----------------------------------------------------------------------
+	if table.deepcopy(data.raw["space-location"]["secretas"]) then
 
-data.raw.planet["secretas"].label_orientation = 0.5
-data.raw.planet["secretas"].magnitude = 1.25
-data.raw.planet["secretas"].distance = 38
-data.raw.planet["secretas"].orientation = 0
+		data.raw["space-location"]["secretas"].label_orientation = 0.5
+		data.raw["space-location"]["secretas"].magnitude = 1.25
+		data.raw["space-location"]["secretas"].distance = 38
+		data.raw["space-location"]["secretas"].orientation = 0
+
+	end
+
 
 
 data.raw.planet["frozeta"].label_orientation = 0.75

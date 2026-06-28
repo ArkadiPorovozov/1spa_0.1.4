@@ -5,7 +5,7 @@
     "title": "1spa",
     "description": "space map rework", 
     "contact": "https://discord.gg/hsfpf8VwYS",
-    "factorio_version": "2.0",
+    "factorio_version": "2.1",
     "dependencies": ["base >= 2.0.28", "space-age >= 2.0.28", "PlanetsLib >= 1.1.20", "? panglia_planet", "? Moshine", "? skewer_planet_vesta", "? rubia", "? slp-dyson-sphere-reworked", "? Paracelsin", "? planet-muluna", "? metal-and-stars" 
 ]
 }

@@ -8,6 +8,10 @@ data.raw["utility-constants"]["default"].starmap_orbit_hovered_color = { 128, 12
 -- Удалить неиспользованные космические соединения, заставив их нацелиться на себя
 data.raw["space-connection"]["gleba-fulgora"].from = "gleba"
 data.raw["space-connection"]["gleba-fulgora"].to = "gleba"
+data.raw["space-connection"]["aquilo-fulgora"] = nil
+data.raw["space-connection"]["fulgora-aquilo"] = nil
+data.raw["space-connection"]["gleba-aquilo"].to = "gleba"
+data.raw["space-connection"]["gleba-aquilo"].from = "gleba"
 data.raw["space-connection"]["nauvis-vulcanus"].from = "nauvis"
 data.raw["space-connection"]["nauvis-vulcanus"].to = "nauvis"
 data.raw["space-connection"]["aquilo-solar-system-edge"].from = "aquilo"
@@ -43,49 +47,3 @@ if  mods["Paracelsin"] or mods["secretas"] then
 end
 
 
-
-
---data.raw.planet["aquilo"].localised_name={"space-location-name.aquilo"}
-
-if data.raw.planet then
-    local planet_templates = {
-        nauvis = "planet-template-g.name",
-        gleba = "planet-template-g.name",
-        aquilo = "planet-template-bl.name",
-        fulgora = "planet-template-p.name",
-        vulcanus = "planet-template-o.name",
-    }
-    for planet_name, template_key in pairs(planet_templates) do
-        if data.raw.planet[planet_name] then
-            data.raw.planet[planet_name].localised_name = {
-                template_key,
-        {"planet-name." .. planet_name}
-    }
-        end
-    end
-end
-local q = "pg.name"
-
-if data.raw["space-location"] then
-    local locale = {
-        ["nauvis-intercept"] = q,
-        ["aquilo-intercept"] = q,
-        ["gleba-intercept"] = q,
-        ["vulcanus-intercept"] = q,
-        ["fulgora-intercept"] = q,
-        ["location-discovery-aquilite-cluster"] = q,
-        ["carbolithic-belt"] = q,
-        ["location-discovery-ferrarius-belt"] = q,
-        ["ferrarius-belt"] = q,
-        ["carbolithic-belt-intercept"] = q,
-    }
-
-    for location_name, template_key in pairs(locale) do
-        if data.raw["space-location"][location_name] then
-            data.raw["space-location"][location_name].localised_name = {
-                template_key,
-                {"space-location-name." .. location_name}
-            }
-        end
-    end
-end

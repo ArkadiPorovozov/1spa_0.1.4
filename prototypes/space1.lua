@@ -6,8 +6,8 @@ data:extend({
         type = "space-location", 
         name = "sosal",
         localised_name = "sosal",  -- название сюды
-        icon = "__space-age__/graphics/icons/solar-system-edge.png",     
-        order = "f[solar-system-edge]", 
+        icon = "__space-age__/graphics/icons/solar-system-edge.png",
+        order = "f[solar-system-edge]",
         subgroup = "planets",
         orbit = {
             parent = {
@@ -16,11 +16,11 @@ data:extend({
             },
             distance = 15,
             orientation = 0.5,
-        },    
-        draw_orbit = false,    
-        distance = 40, 
-        orientation = 0,          
-        label_orientation = 0.15,        
+        },
+        draw_orbit = false,
+        distance = 40,
+        orientation = 0,
+        label_orientation = 0.15,
         solar_power_in_space = 100,
         --asteroid_spawn_influence = 1, 
         --asteroid_spawn_definitions = asteroid_util.spawn_definitions(
@@ -125,7 +125,6 @@ data:extend(
             length = 1500,
             icon = "__1spa__/graphics/icons/transfer-point.png",
             asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_fulgora),
-    
         },
         {
             type = "space-connection",
@@ -137,7 +136,6 @@ data:extend(
             length = 1500,
             icon = "__1spa__/graphics/icons/transfer-point.png",
             asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_fulgora),
-    
         },
         {
             type = "space-connection",
@@ -161,8 +159,7 @@ data:extend(
             length = 1000,
             icon = "__1spa__/graphics/icons/transfer-point.png",
             asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_fulgora),
-    
-        },  
+        },
         {
             type = "space-connection",
             name = "sosale2-ai",
@@ -173,8 +170,7 @@ data:extend(
             length = 5000,
             icon = "__1spa__/graphics/icons/transfer-point.png",
             asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_fulgora),
-    
-        },  
+        },
         {
             type = "space-connection",
             name = "sosale3-gi",
@@ -185,7 +181,6 @@ data:extend(
             length = 1000,
             icon = "__1spa__/graphics/icons/transfer-point.png",
             asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_fulgora),
-    
         },
 })
 

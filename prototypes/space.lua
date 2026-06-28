@@ -1013,21 +1013,21 @@ PlanetsLib:update(
 				draw_orbit = false,
 		},})
 
-		PlanetsLib:update(
-			{
-				{
+PlanetsLib:update(
+	{
+		{
+			type = "space-location",
+			name = "skewer_lost_beyond",
+			orbit = {
+				parent = {
 					type = "space-location",
-					name = "skewer_lost_beyond",
-					orbit = {
-						parent = {
-							type = "space-location",
-							name = "star"
-						},
-						distance = 81,
-						orientation = 0.25,
-					},
+					name = "star"
 				},
-		})
+				distance = 81,
+				orientation = 0.25,
+			},
+		},
+})
 
 --0,375
 end
@@ -1067,4 +1067,53 @@ PlanetsLib:update(
 		},})
 
 --0,375
+end
+
+if mods["cubium"] then
+
+
+	if data.raw["space-connection"]["vulcanus-cubium"] then
+		data.raw["space-connection"]["vulcanus-cubium"] = nil
+	end
+	if data.raw["space-connection"]["gleba-cubium"] then
+		data.raw["space-connection"]["gleba-cubium"] = nil
+	end
+
+
+PlanetsLib:update(
+			{{
+				type = "planet",
+				name = "cubium",
+				order = "c[cubium]",
+				label_orientation = 0.75,
+				magnitude = 0.25,
+				orbit =
+				{
+					parent = {
+						type = "space-location",
+						name = "star"
+					},
+					distance = 13,
+					orientation = 0.47,
+				},
+				draw_orbit = false,
+	},
+})
+
+data:extend(
+	{
+		{
+			type = "space-connection",
+			name = "cubium-vi",
+			subgroup = "planet-connections",
+			from = "vulcanus-intercept",
+			to = "cubium",
+			order = "d",
+			length = 10000,
+			asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_fulgora),
+			icon = "__1spa__/graphics/icons/transfer-point.png"
+		},
+	}
+)
+
 end
